@@ -2,6 +2,4 @@ general:
   build_dir: src/junitexample
   
   
- test:
-  override:
-    - java src/justexample/
+mvn dependency:resolve
