@@ -3,3 +3,6 @@ general:
   
   
 mvn dependency:resolve
+
+test:
+ - java TriangleTest.java
