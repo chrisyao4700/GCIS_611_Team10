@@ -1,5 +1,7 @@
 general:
-  build_dir: src\junitexample
+  build_dir: src/junitexample
   
   
-  
+ test:
+  override:
+    - java src/justexample/
