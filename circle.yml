@@ -1,8 +1,8 @@
-general:
-  build_dir: src/junitexample
-  
-  
-mvn dependency:resolve
+machine:
+  java:
+    version: openjdk7
 
 test:
- - java TriangleTest.java
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
